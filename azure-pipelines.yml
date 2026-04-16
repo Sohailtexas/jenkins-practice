@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool: 
-  VmImage:ubuntu-latest
+  VmImage: ubuntu-latest
 
 steps:
  - script: echo "started devops"
