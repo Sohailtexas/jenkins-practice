@@ -17,4 +17,4 @@ steps:
    displayName: 'run script'
 
  - script: echo "Pipeline completed"
-   displayName: 'End' 
+   displayName: 'End'
