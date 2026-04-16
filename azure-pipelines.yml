@@ -6,14 +6,15 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: 
+  VmImage:ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+ - script: echo "started devops"
+   displayName: 'start'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+ - script: bash script.sh
+   displayName: 'run script'
+
+ - script: echo "Pipeline completed"
+   displayName: 'End' 
