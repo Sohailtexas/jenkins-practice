@@ -14,19 +14,19 @@ stages:
   jobs:
   - job: Build
     steps:
-  - script: echo "this is building"
-    displayName: 'shit'
+    - script: echo "this is building"
+      displayName: 'shit'
 
 - stage: Test
   jobs:
    - job: Test
      steps:
-   - script: echo "this is test"
-     displayName: 'yeah'
+     - script: echo "this is test"
+       displayName: 'yeah'
 
 - stage: Deploy
   jobs:
   - job: Deploy
     steps:
-  - script: echo "this is deploy"
-    displayName: 'deploying'
+    - script: echo "this is deploy"
+      displayName: 'deploying'
