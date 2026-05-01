@@ -7,23 +7,26 @@ trigger:
 - main
 
 pool:
-  vmImage:ubuntu-latest
+  vmImage: ubuntu-latest
 
 stages:
 - stage: Build
   jobs:
   - job: Build
+    steps:
   - script: echo "this is building"
     displayName: 'shit'
 
 - stage: Test
   jobs:
    - job: Test
+     steps:
    - script: echo "this is test"
      displayName: 'yeah'
 
 - stage: Deploy
   jobs:
   - job: Deploy
+    steps:
   - script: echo "this is deploy"
     displayName: 'deploying'
