@@ -6,15 +6,24 @@
 trigger:
 - main
 
-pool: 
-  VmImage: ubuntu-latest
+pool:
+  vmImage:ubuntu-latest
 
-steps:
- - script: echo "started devops"
-   displayName: 'start'
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+  - script: echo "this is building"
+    displayName: 'shit'
 
- - script: bash script.sh
-   displayName: 'run script'
+- stage: Test
+  jobs:
+   - job: Test
+   - script: echo "this is test"
+     displayName: 'yeah'
 
- - script: echo "Pipeline completed"
-   displayName: 'End'
+- stage: Deploy
+  jobs:
+  - job: Deploy
+  - script: echo "this is deploy"
+    displayName: 'deploying'
